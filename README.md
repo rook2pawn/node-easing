@@ -8,6 +8,9 @@ and free Email Weather Reports with a promise to never sell your information unl
 
 This library just gives you the MATH.
 
+Give it an array of arbitrary size and it fills those values. You'll be animating and looking stylish in no time.
+
+
 Simple
 ======
 

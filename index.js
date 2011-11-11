@@ -10,7 +10,7 @@ function Easing(list,type,options) {
     }
     // you can call it with either Easing(11, 'linear') or Easing(new Array(11), 'linear')
     if (typeof list == 'number') {
-        list = new Array(length);
+        list = new Array(list);
     }
     funclist['linear'] = function(x) {
         return x;

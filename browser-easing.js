@@ -319,7 +319,7 @@ exports.extname = function(path) {
 
 });
 
-require.define("/index.js", function (require, module, exports, __dirname, __filename) {
+require.define("easing", function (require, module, exports, __dirname, __filename) {
     module.exports = exports = Easing;
 
 function Easing(list,type) {
@@ -367,4 +367,4 @@ function Easing(list,type) {
 };
 
 });
-require("/index.js");
+require("easing");

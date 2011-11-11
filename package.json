@@ -2,7 +2,12 @@
   "author": "David Wee <rook2pawn@gmail.com> (http://rook2pawn.com)",
   "name": "easing",
   "description": "Easing Functions Without the Framework Cruft",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "keywords" : [
+    "easing",
+    "animation",
+    "tween"
+  ],
   "homepage": "https://github.com/rook2pawn/node-easing",
   "repository": {
     "type": "git",

@@ -322,8 +322,18 @@ exports.extname = function(path) {
 require.define("easing", function (require, module, exports, __dirname, __filename) {
     module.exports = exports = Easing;
 
-function Easing(list,type) {
+function Easing(list,type,options) {
     var funclist = {};
+    var endToEnd = false;
+    if (options !== undefined) {
+        if ((options.endToEnd !== undefined) && (options.endToEnd === true)) {
+            endToEnd = true; 
+        }
+    }
+    // you can call it with either Easing(11, 'linear') or Easing(new Array(11), 'linear')
+    if (typeof list == 'number') {
+        list = new Array(length);
+    }
     funclist['linear'] = function(x) {
         return x;
     };
@@ -358,11 +368,25 @@ function Easing(list,type) {
         type = 'quadratic';
     }
     var step = 1/(list.length-1);
+
     for (var i = 1; i < list.length-1; i++) {
         list[i] = funclist[type](i*step);
     }
     list[0] = 0;
     list[list.length-1] = 1; 
+
+    if (endToEnd) {
+        var mid = Math.floor(list.length / 2);
+        for (var i=1; i< mid; i++) {
+            list[i] = list[i*2];
+        }
+        list[mid] = 1;
+        for (var i=mid+1; i<list.length-1; i++) {
+            list[i] = list[mid-(i-mid)];
+        }
+        list[list.length-1] = 0;
+    }
+
     return list;
 };
 

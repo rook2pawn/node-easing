@@ -10,8 +10,8 @@ This library just gives you the MATH.
 
 Give it an array of arbitrary size and it fills those values. You'll be animating and looking stylish in no time.
 
-New!
-====
+Load it up
+==========
     
     Simply include browser-easing.js and you can require('easing') directly in your client side code.
 
@@ -37,8 +37,9 @@ Simple
         0.7290000000000001,
     1 ]
 
-Options
-=======
+
+Types of Easing
+===============
 
 Linear
 ------
@@ -84,3 +85,15 @@ Exponential
 -----------
     
     simply call Easing(list,'exponential')
+
+
+
+Optional options
+================
+
+End To End
+----------
+
+    If we wanted to go from 0 to 1 back to 0 quadratically, simply call Easing(list,'quadratic',{endToEnd:true});
+
+

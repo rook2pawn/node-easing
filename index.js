@@ -29,14 +29,17 @@ function Easing(list,type) {
     funclist['expo'] = exponential;
     funclist['exp'] = exponential;
     funclist['circular'] = function(x) {
-        return Math.sin((Math.PI/2)*x);
+        var time = (Math.PI*1.5) + (x * (Math.PI/2));
+        return 1 + Math.sin(time);
     }
     if (type === undefined) {
         type = 'quadratic';
     }
     var step = 1/(list.length-1);
-    for (var i = 0; i < list.length; i++) {
+    for (var i = 1; i < list.length-1; i++) {
         list[i] = funclist[type](i*step);
     }
+    list[0] = 0;
+    list[list.length-1] = 1; 
     return list;
 };

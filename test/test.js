@@ -1,5 +1,4 @@
-var Easing = require('./');
-
+var Easing = require('../');
 var list = new Array(11);
 console.log(Easing(list,'linear'));
 console.log(Easing(list,'quadratic'));

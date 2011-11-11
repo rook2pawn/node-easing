@@ -325,9 +325,13 @@ require.define("easing", function (require, module, exports, __dirname, __filena
 function Easing(list,type,options) {
     var funclist = {};
     var endToEnd = false;
+    var invert = false;
     if (options !== undefined) {
         if ((options.endToEnd !== undefined) && (options.endToEnd === true)) {
             endToEnd = true; 
+        }
+        if ((options.invert !== undefined) && (options.invert === true)) {
+            invert = true; 
         }
     }
     // you can call it with either Easing(11, 'linear') or Easing(new Array(11), 'linear')
@@ -386,7 +390,11 @@ function Easing(list,type,options) {
         }
         list[list.length-1] = 0;
     }
-
+    if (invert) {
+        for (var i = 0; i < list.length;i++) {
+            list[i] = 1 - list[i];
+        }
+    }
     return list;
 };
 

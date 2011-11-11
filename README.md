@@ -94,6 +94,15 @@ Optional options
 End To End
 ----------
 
-    If we wanted to go from 0 to 1 back to 0 quadratically, simply call Easing(list,'quadratic',{endToEnd:true});
+If we wanted to go from 0 to 1 back to 0 quadratically, simply call 
 
+    Easing(list,'quadratic',{endToEnd:true});
 
+Invert
+------
+
+If we want to go from 1 to 0 (or 1 to 0 back to 1) instead of 0 to 1, say 'linear' style, simply call 
+
+    Easing(list,'linear',{invert:true});
+
+You can mix and match these options.

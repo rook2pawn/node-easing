@@ -1,3 +1,5 @@
+![easing](https://github.com/rook2pawn/node-easing/raw/master/graph.png)
+
 easing
 ======
 

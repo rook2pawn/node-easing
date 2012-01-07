@@ -21,7 +21,7 @@ Load it up
 Simple
 ======
 
-    var x = Easing(new Array(11),'cubic');
+    var x = Easing(11,'cubic');
 
 
     And there you have it, an array of eleven elements whose value starts at 0 and ends at 1 which are populated with
@@ -46,47 +46,55 @@ Types of Easing
 Linear
 ------
 
-    simply call Easing(list,'linear')
+For an array of 42 values that are linear, 
+
+    Easing(42,'linear')
 
  
 Quadratic
 ---------
 
-    simply call Easing(list,'quadratic')
+For an array of 100 values that are quadratic,
+
+    Easing(100,'quadratic')
 
  
 Cubic
 -----
 
-    simply call Easing(list,'cubic')
+For an array of 42 cubic values,
+    
+    Easing(42,'cubic')
 
 Quartic
 -------
 
-    simply call Easing(list,'quartic')
+For an array of 1492 quartic values,
+
+    Easing(1492,'quartic')
 
 Quintic
 -------
 
-    simply call Easing(list,'quintic')
+    Easing(25,'quintic')
 
 
 Sinusoidal
 ----------
-
-    simply call Easing(list,'sinusoidal')
-    or Easing(list,'sin')
+    
+    Easing(333,'sinusoidal')
+    Easing(333,'sin')
 
 Circular
 --------
     
-    simply call Easing(list,'circular')
+    Easing(314,'circular')
 
 
 Exponential
 -----------
     
-    simply call Easing(list,'exponential')
+    Easing(81,'exponential')
 
 
 
@@ -98,13 +106,13 @@ End To End
 
 If we wanted to go from 0 to 1 back to 0 quadratically, simply call 
 
-    Easing(list,'quadratic',{endToEnd:true});
+    Easing(100,'quadratic',{endToEnd:true});
 
 Invert
 ------
 
 If we want to go from 1 to 0 (or 1 to 0 back to 1) instead of 0 to 1, say 'linear' style, simply call 
 
-    Easing(list,'linear',{invert:true});
+    Easing(100,'linear',{invert:true});
 
 You can mix and match these options.

@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/rook2pawn/node-easing.png)](http://travis-ci.org/rook2pawn/node-easing)
 ![easing](https://github.com/rook2pawn/node-easing/raw/master/graph.png)
 
 easing

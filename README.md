@@ -4,13 +4,7 @@ easing
 ======
 
 Easing functions simply describe functions that are used for the purpose of easing.
-You can find many libraries that give you easing functionality, but you're usually tied to a large library and
-that means a large intrusion of unwanted code, similar to installing an application and it asking if you'd like the Bing Bar, Yahoo Search, 
-and free Email Weather Reports with a promise to never sell your information unless the price is right.
-
-This library just gives you the MATH.
-
-Give it an array of arbitrary size and it fills those values. You'll be animating and looking stylish in no time.
+Give it an array of arbitrary size and it fills those values. 
 
 Load it up
 ==========

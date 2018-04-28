@@ -3,17 +3,22 @@
   "name": "easing",
   "description": "Easing Functions Without the Framework Cruft",
   "version": "0.0.4",
-  "keywords" : [
+  "keywords": [
     "easing",
     "animation",
     "tween"
   ],
+  "scripts": {
+    "test": "node test/*.js"
+  },
   "homepage": "https://github.com/rook2pawn/node-easing",
   "repository": {
     "type": "git",
     "url": "git@github.com:rook2pawn/node-easing.git"
   },
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "browserify": "^16.2.0"
+  },
   "devDependencies": {}
 }

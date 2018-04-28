@@ -1,10 +1,7 @@
-var Easing = require('../');
-var list = new Array(100);
-/*console.log(Easing(list,'linear'));
-console.log(Easing(list,'quadratic'));
-console.log(Easing(list,'cubic'));
-console.log(Easing(list,'sinusoidal'));
-console.log(Easing(list,'exp'));
-console.log(Easing(list,'circular'));
-*/
-console.log(Easing(list,'linear',{endToEnd:true}));
+const Easing = require('../');
+const assert = require("assert");
+
+const expected = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ];
+
+assert.deepStrictEqual(Easing(11,'linear',{endToEnd:false}), expected )
+assert.deepStrictEqual(Easing(11,'linear'), expected )

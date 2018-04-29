@@ -9,8 +9,9 @@
     "tween"
   ],
   "scripts": {
+    "build-browser-standalone" : "browserify -s Easing index.js -o browser-easing.js",
     "test": "nyc node test/*.js | tap-spec",
-     "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "homepage": "https://github.com/rook2pawn/node-easing",
   "repository": {
@@ -18,8 +19,10 @@
     "url": "git@github.com:rook2pawn/node-easing.git"
   },
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
+    "browserify": "^16.2.0",
     "coveralls": "^3.0.0",
     "nyc": "^11.7.1",
     "tap-spec": "^4.1.1",

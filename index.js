@@ -1,20 +1,16 @@
 const funclist = require("./lib/functions");
 
-const multdec = function(i, step) {
-  return (~~((i * step) * 1000) / 1000)
+const round = function (val) {
+  return (~~(val * 1000) / 1000)
 }
 
-const Easing = function(number, type, options) {
-
-  if (options === undefined) {
-    var options = {};
-  }
+const Easing = function(number, type, options = {}) {
 
   const list = new Array(number);
   const step = 1 / (list.length - 1);
 
   for (var i = 1; i < list.length - 1; i++) {
-    let val = funclist[type](multdec(i, step));
+    let val = round(funclist[type](i * step));
     list[i] = val;
   }
 

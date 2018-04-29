@@ -9,7 +9,8 @@
     "tween"
   ],
   "scripts": {
-    "test": "node test/*.js"
+    "test": "nyc node test/*.js | tap-spec",
+     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "homepage": "https://github.com/rook2pawn/node-easing",
   "repository": {
@@ -17,8 +18,11 @@
     "url": "git@github.com:rook2pawn/node-easing.git"
   },
   "main": "index.js",
-  "dependencies": {
-    "browserify": "^16.2.0"
-  },
-  "devDependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "nyc": "^11.7.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0"
+  }
 }

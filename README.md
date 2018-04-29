@@ -1,24 +1,41 @@
-[![Build Status](https://travis-ci.org/rook2pawn/node-easing.svg?branch=master)](https://travis-ci.org/rook2pawn/node-easing)
+| testing | coverage |
+| ------- | ---------|
+| [![Build Status](https://travis-ci.org/rook2pawn/node-easing.svg?branch=master)](https://travis-ci.org/rook2pawn/node-easing) | [![Coverage Status](https://coveralls.io/repos/github/rook2pawn/node-easing/badge.svg?branch=master)](https://coveralls.io/github/rook2pawn/node-easing?branch=master) |
 
 ![easing](https://github.com/rook2pawn/node-easing/raw/master/graph.png)
 
 # easing
 
-Easing functions simply describe functions that are used for the purpose of easing.
-Give it an array of arbitrary size and it fills those values.
-
 ```js
-    const x = Easing(11,'linear');
+    const Easing = require('easing')
+    const x = Easing(11,'linear')
 
     // [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ]
 
 ```
+
+
+## static example
+
+    const Static = require("easing").Static
+
+
+
 ## install
 
     npm install --save easing
 
 ```js
     const easing = require("easing")
+```
+
+
+
+```js
+    const x = Easing(11,'linear');
+
+    // [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ]
+
 ```
 
 ## On the client

@@ -101,6 +101,31 @@ If we want to go from 1 to 0 (or 1 to 0 back to 1) instead of 0 to 1, say 'linea
 
 You can mix and match these options.
 
+## additional interfaces
+
+### Event interface
+
+```js
+    const Easing = require('easing')
+    const x = Easing.event(11,'linear')
+    x.on('data', (data) => { ... })
+```
+
+### Stream interface
+```js
+    const Easing = require('easing')
+    const x = Easing.stream(11,'linear')
+    x.pipe(process.stdout)
+```
+
+These two interfaces have their own options `duration` and `repeat` that you can also mix and match.
+
+These two interfaces can take one or all of these options
+
+* invert : boolean
+* endToEnd : boolean
+* duration : integer (milliseconds, defaults to 1000)
+* repeat : boolean
 
 ## LICENSE
 

@@ -2,11 +2,14 @@
   "author": "David Wee <rook2pawn@gmail.com> (http://rook2pawn.com)",
   "name": "easing",
   "description": "Easing Functions Without the Framework Cruft",
-  "version": "1.0.0",
-  "keywords": ["easing", "animation", "tween"],
+  "version": "1.1.0",
+  "keywords": [
+    "easing",
+    "animation",
+    "tween"
+  ],
   "scripts": {
-    "build-browser-standalone":
-      "browserify -s Easing index.js -o browser-easing.js",
+    "build-browser-standalone": "browserify -s Easing index.js -o browser-easing.js",
     "test": "nyc node test/*.js | tap-spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },

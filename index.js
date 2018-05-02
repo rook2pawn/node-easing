@@ -1,21 +1,7 @@
-const staticValues = require("./lib/static")
+const staticValues = require("./lib/static");
+
 const Easing = staticValues;
-
-/*
-const EventEmitter = require('events');
-
-
-class EaseEvent extends EventEmitter {
-  write(data) {
-    this.emit('data', data);
-  }
-}
-
-
-Easing.event = function(number, type, options = {}) {
-  const list = staticValues(number, type, options);
-}
-
-*/
+Easing.event = require("./lib/event");
+Easing.stream = require("./lib/stream");
 
 module.exports = exports = Easing;

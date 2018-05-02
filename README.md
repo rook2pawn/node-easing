@@ -125,7 +125,7 @@ These two interfaces can take one or all of these options
 * invert : boolean
 * endToEnd : boolean
 * duration : integer (milliseconds, defaults to 1000)
-* repeat : boolean
+* repeat : boolean (default false)
 
 ## LICENSE
 

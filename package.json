@@ -3,13 +3,10 @@
   "name": "easing",
   "description": "Easing Functions Without the Framework Cruft",
   "version": "1.0.0",
-  "keywords": [
-    "easing",
-    "animation",
-    "tween"
-  ],
+  "keywords": ["easing", "animation", "tween"],
   "scripts": {
-    "build-browser-standalone": "browserify -s Easing index.js -o browser-easing.js",
+    "build-browser-standalone":
+      "browserify -s Easing index.js -o browser-easing.js",
     "test": "nyc node test/*.js | tap-spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -25,6 +22,7 @@
     "coveralls": "^3.0.0",
     "nyc": "^11.7.1",
     "tap-spec": "^4.1.1",
-    "tape": "^4.9.0"
+    "tape": "^4.9.0",
+    "through2": "^2.0.3"
   }
 }

@@ -1,6 +1,21 @@
 const Easing = require("../");
 const test = require("tape");
 
+test("uniqueList", function(t) {
+  t.plan(1);
+  const expected = [
+    "linear",
+    "quadratic",
+    "cubic",
+    "quartic",
+    "quintic",
+    "sinusoidal",
+    "exponential",
+    "circular"
+  ];
+  t.deepEqual(Easing.uniqueList, expected);
+});
+
 test("end to end", function(t) {
   t.plan(1);
   const expected = [0, 0.04, 0.16, 0.36, 0.64, 1, 0.64, 0.36, 0.16, 0.04, 0];
@@ -132,15 +147,15 @@ test("circular", function(t) {
   t.plan(2);
   const expected = [
     0,
-    0.012,
-    0.048,
-    0.108,
-    0.19,
-    0.292,
-    0.412,
-    0.546,
-    0.69,
-    0.843,
+    0.005,
+    0.02,
+    0.046,
+    0.083,
+    0.133,
+    0.2,
+    0.285,
+    0.4,
+    0.564,
     1
   ];
   t.deepEqual(Easing(11, "circular", { endToEnd: false }), expected);

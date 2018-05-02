@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build-browser-standalone": "browserify -s Easing index.js -o browser-easing.js",
-    "test": "nyc node test/*.js | tap-spec",
+    "test": "nyc tape test/*.js | tap-spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "homepage": "https://github.com/rook2pawn/node-easing",

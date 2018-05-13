@@ -11,7 +11,8 @@ test("uniqueList", function(t) {
     "quintic",
     "sinusoidal",
     "exponential",
-    "circular"
+    "circular",
+    "sigmoid"
   ];
   t.deepEqual(Easing.uniqueList, expected);
 });
@@ -160,4 +161,11 @@ test("circular", function(t) {
   ];
   t.deepEqual(Easing(11, "circular", { endToEnd: false }), expected);
   t.deepEqual(Easing(11, "circular"), expected);
+});
+
+test("sigmoid", function(t) {
+  t.plan(2);
+  const expected = [ 0, 0.524, 0.549, 0.574, 0.598, 0.622, 0.645, 0.668, 0.689, 0.71, 1 ];
+  t.deepEqual(Easing(11, "sigmoid", { endToEnd: false }), expected);
+  t.deepEqual(Easing(11, "sigmoid"), expected);
 });

@@ -15,13 +15,25 @@
     "animation",
     "tween"
   ],
+  "files": [
+    "dist",
+    "docs",
+    "lib",
+    "src",
+    "types/index.d.ts",
+    "browser-easing.js",
+    "index.html",
+    "README.md"
+  ],
   "scripts": {
     "build": "npm run build:lib && npm run build:dist",
     "build:lib": "babel ./src --source-maps --out-dir ./lib",
     "build:dist": "webpack -p",
     "clean": "rimraf lib browser-easing.js",
     "prepublish": "npm run clean && npm run test && npm run build",
-    "test": "nyc tape test/*.js | tap-spec",
+    "test": "npm run test:dts && npm run test:tape",
+    "test:dts": "dtslint types",
+    "test:tape": "nyc tape test/*.js | tap-spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "homepage": "https://github.com/kohlmannj/node-easing",
@@ -38,6 +50,7 @@
     "@babel/preset-env": "^7.0.0-beta.55",
     "babel-loader": "^8.0.0-beta.4",
     "coveralls": "^3.0.0",
+    "dtslint": "^0.3.0",
     "nyc": "^11.7.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.9.0",

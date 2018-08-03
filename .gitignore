@@ -4,3 +4,4 @@ package-lock.json
 lib
 dist
 yarn.lock
+browser-easing.js

@@ -17,6 +17,7 @@
     "build:lib": "babel ./src --source-maps --out-dir ./lib",
     "build:dist": "webpack -p",
     "clean": "rimraf lib browser-easing.js",
+    "prepublish": "npm run clean && npm run test && npm run build",
     "test": "nyc tape test/*.js | tap-spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },

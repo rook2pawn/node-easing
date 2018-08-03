@@ -7,6 +7,9 @@
     "David Wee <rook2pawn@gmail.com> (http://rook2pawn.com)",
     "Joseph Kohlmann <kohlmannj@mac.com>"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "easing",
     "animation",

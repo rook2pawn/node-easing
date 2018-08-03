@@ -1,4 +1,4 @@
-const Easing = require("../");
+const Easing = require("../src");
 const test = require("tape");
 
 test("event", function(t) {

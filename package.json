@@ -1,6 +1,6 @@
 {
   "name": "@kohlmannj/easing",
-  "version": "1.2.0",
+  "version": "1.1.4",
   "description": "Easing Functions Without the Framework Cruft",
   "author": "Joseph Kohlmann <kohlmannj@mac.com>",
   "contributors": [

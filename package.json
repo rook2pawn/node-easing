@@ -28,9 +28,7 @@
     "build:dist": "webpack -p",
     "clean": "rimraf lib browser-easing.js",
     "prepublish": "npm run clean && npm run test && npm run build",
-    "test": "npm run test:dts && npm run test:tape",
-    "test:dts": "dtslint types",
-    "test:tape": "nyc tape test/*.js | tap-spec",
+    "test": "nyc tape test/*.js | tap-spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "homepage": "https://github.com/rook2pawn/node-easing",
@@ -39,7 +37,6 @@
     "url": "git@github.com:rook2pawn/node-easing.git"
   },
   "main": "lib/index.js",
-  "types": "types/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.55",
@@ -47,7 +44,6 @@
     "@babel/preset-env": "^7.0.0-beta.55",
     "babel-loader": "^8.0.0-beta.4",
     "coveralls": "^3.0.0",
-    "dtslint": "^0.3.0",
     "nyc": "^11.7.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.9.0",

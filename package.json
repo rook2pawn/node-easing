@@ -1,15 +1,12 @@
 {
-  "name": "@kohlmannj/easing",
+  "name": "easing",
   "version": "1.2.2",
   "description": "Easing Functions Without the Framework Cruft",
-  "author": "Joseph Kohlmann <kohlmannj@mac.com>",
+  "author": "David Wee <rook2pawn@gmail.com> (http://rook2pawn.com)",
   "contributors": [
     "David Wee <rook2pawn@gmail.com> (http://rook2pawn.com)",
     "Joseph Kohlmann <kohlmannj@mac.com>"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "keywords": [
     "easing",
     "animation",
@@ -36,10 +33,10 @@
     "test:tape": "nyc tape test/*.js | tap-spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
-  "homepage": "https://github.com/kohlmannj/node-easing",
+  "homepage": "https://github.com/rook2pawn/node-easing",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kohlmannj/node-easing.git"
+    "url": "git@github.com:rook2pawn/node-easing.git"
   },
   "main": "lib/index.js",
   "types": "types/index.d.ts",

@@ -1,8 +1,8 @@
 | testing | coverage |
 | ------- | ---------|
-| [![Build Status](https://travis-ci.org/kohlmannj/node-easing.svg?branch=master)](https://travis-ci.org/kohlmannj/node-easing) | [![Coverage Status](https://coveralls.io/repos/github/kohlmannj/node-easing/badge.svg?branch=master)](https://coveralls.io/github/kohlmannj/node-easing?branch=master) |
+| [![Build Status](https://travis-ci.org/rook2pawn/node-easing.svg?branch=master)](https://travis-ci.org/rook2pawn/node-easing) | [![Coverage Status](https://coveralls.io/repos/github/rook2pawn/node-easing/badge.svg?branch=master)](https://coveralls.io/github/rook2pawn/node-easing?branch=master) |
 
-![easing](https://github.com/kohlmannj/node-easing/raw/master/graph.png)
+![easing](https://github.com/rook2pawn/node-easing/raw/master/graph.png)
 
 # easing
 

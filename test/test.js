@@ -1,6 +1,22 @@
 const Easing = require("../src");
 const test = require("tape");
 
+test("start and end", function(t) {
+  t.plan(1);
+  const expected = [ 125,
+    166.375,
+    216,
+    274.625,
+    343,
+    421.875,
+    512,
+    614.125,
+    729,
+    857.375,
+    1000 ];
+    t.deepEqual(Easing(11,"cubic", {start:5, end:10}), expected);
+});
+
 test("uniqueList", function(t) {
   t.plan(1);
   const expected = [
@@ -165,7 +181,7 @@ test("circular", function(t) {
 
 test("sigmoid", function(t) {
   t.plan(2);
-  const expected = [ 0, 0.524, 0.549, 0.574, 0.598, 0.622, 0.645, 0.668, 0.689, 0.71, 1 ];
+  const expected = [ 0.5, 0.524, 0.549, 0.574, 0.598, 0.622, 0.645, 0.668, 0.689, 0.71, 0.731 ];
   t.deepEqual(Easing(11, "sigmoid", { endToEnd: false }), expected);
   t.deepEqual(Easing(11, "sigmoid"), expected);
 });

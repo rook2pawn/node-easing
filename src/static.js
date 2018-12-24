@@ -10,15 +10,14 @@ const staticValues = function(number, type, options = {}) {
   options.end = (options.end !== undefined) ? options.end : 1
   const width = Math.abs(options.end - options.start)
   const step = width / (list.length - 1);
-
   for (var i = 1; i < list.length - 1; i++) {
     let x = (i * step) + options.start
     let val = round(funclist[type](x));
     list[i] = val;
   }
 
-  list[0] = options.start;
-  list[list.length - 1] = options.end;
+  list[0] = round(funclist[type](options.start));
+  list[list.length - 1] = round(funclist[type](options.end));
 
   if (options.endToEnd) {
     var mid = Math.floor(list.length / 2);

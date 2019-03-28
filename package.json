@@ -1,6 +1,7 @@
 {
   "name": "easing",
   "version": "1.2.1",
+  "license": "MIT",
   "description": "Easing Functions Without the Framework Cruft",
   "author": "David Wee <rook2pawn@gmail.com> (http://rook2pawn.com)",
   "contributors": [
